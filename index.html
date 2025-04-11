@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>lilpeet Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0b1a0b;
+      color: white;
+    }
+
+    header {
+      background-color: #143d14;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: Algerian, serif;
+      color: #d4af37;
+      font-size: 40px;
+      margin: 0;
+    }
+
+    nav {
+      background-color: #0f2e0f;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      gap: 20px;
+    }
+
+    nav a {
+      color: #d4af37;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    section {
+      padding: 20px;
+      display: none;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    .card {
+      background-color: #1a2f1a;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 10px;
+      box-shadow: 0 0 10px #000;
+    }
+
+    footer {
+      background-color: #143d14;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+
+    .contact-info p, .socials p {
+      margin: 5px 0;
+    }
+
+    ul {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+
+    h2 {
+      color: #98fb98;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>lilpeet</h1>
+    <p>Welcome to my personal portfolio</p>
+
+  </header>
+
+  <nav>
+    <a href="#home" onclick="showSection('home')">Home</a>
+    <a href="#about" onclick="showSection('about')">About</a>
+    <a href="#recipes" onclick="showSection('recipes')">My Recipes</a>
+    <a href="#menu" onclick="showSection('menu')">Favorite Meals</a>
+  </nav>
+
+  <!-- Home -->
+  <section id="home" class="active">
+    <div class="card">
+      <h2>Karibu!</h2>
+      <p>Hi there! I'm Peter Maina, aka <strong>lilpeet</strong>, a 19-year-old African male who loves adventure, reading, and creating.</p>
+      <p>I'm currently pursuing a Bachelor's in Medical Microbiology at JKUAT Main Campus, Juja.</p>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="card">
+      <h2>About Me</h2>
+      <img src="images/Profile.jpg" alt="My Profile Photo" style="width: 100px; border: 2px solid #98fb98; margin-bottom: 8px;">
+      <p>I enjoy outdoor activities like hiking, bike riding, and swimming. When I’m not exploring, I’m usually journaling, reading novels, singing, or working out.</p>
+      <p>I’ve lived in Kisumu, Migori, Nakuru, and studied at Anestar Primary and Leshau Boys (brrr...it was cold!).</p>
+      <h3>Skills</h3>
+      <ul>
+        <li>Basic HTML & Web Design</li>
+        <li>Online Writing</li>
+        <li>Computer Packages</li>
+      </ul>
+      <h3>Dreams</h3>
+      <ul>
+        <li>Learn martial arts, ice skating, and ballet</li>
+        <li>Build amazing websites and apps</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Recipes -->
+  <section id="recipes">
+    <div class="card">
+      <h2>My Recipes</h2>
+      <h3>Chapati</h3>
+      <img src="images/Chapati.jpg" alt="My Favorite Meal" style="width: 100px; border-radius: 8px; margin-top: 10px;">
+      <ul>
+        <li>2 cups all-purpose flour</li>
+        <li>1 tsp salt</li>
+        <li>Warm water</li>
+        <li>2 tbsp oil</li>
+      </ul>
+      <p>Mix ingredients to make dough, roll into circles, fry on a hot pan, and enjoy hot!</p>
+
+      <h3>Fries</h3>
+      <img src="images/fries.jpg" alt="My Favorite Meal" style="width: 100px; border-radius: 8px; margin-top: 10px;">
+      <ul>
+        <li>4 large potatoes</li>
+        <li>Salt</li>
+        <li>Cooking oil</li>
+      </ul>
+      <p>Peel, cut, and deep fry until golden. Serve with ketchup or chili!</p>
+    </div>
+  </section>
+
+  <!-- Menu -->
+  <section id="menu">
+    <div class="card">
+      <h2>Favorite Meals</h2>
+     
+      <ul>
+        <li>Chapati & Beans</li>
+        <li>Fries with Sausages</li>
+        <li>Spaghetti with minced meat</li>
+        <li>Rice with beef stew</li>
+      </ul>
+      <p>There’s just something special about food that feels like home, no lie.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="contact-info">
+      <h3>Contact Me</h3>
+      <p>Email: peternderitu183@gmail.com</p>
+      <p>Phone: 0115773637</p>
+    </div>
+    <div class="socials">
+      <p>Instagram: <a href="https://www.instagram.com/i_am.pita" target="_blank">@i_am.pita</a></p>
+    </div>
+    <p>&copy; 2025 lilpeet. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll("section");
+      sections.forEach(section => section.classList.remove("active"));
+      document.getElementById(sectionId).classList.add("active");
+    }
+  </script>
+</body>
+</html>
